@@ -1,0 +1,366 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #c2185b;
+    color: white;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(233,30,99,0.3);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: none;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.sidebar li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.sidebar a.active {
+    background: #e91e63;
+    color: white;
+    font-weight: 500;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 2rem;
+    min-height: calc(100vh - 60px);
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #c2185b;
+    color: white;
+    padding: 2rem;
+    margin-left: 250px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Typography */
+h1 {
+    color: #c2185b;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h2 {
+    color: #e91e63;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #e91e63;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c2185b;
+}
+
+/* Homepage Specific Styles */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.link-card:hover {
+    border-color: #e91e63;
+    background: #fce4ec;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(233,30,99,0.2);
+}
+
+.link-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    width: 50px;
+    text-align: center;
+}
+
+.link-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #c2185b;
+    font-size: 1.1rem;
+}
+
+.link-content p {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* FAQ Styles */
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    color: #c2185b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Contact/Feedback Card Styles */
+.contact-method,
+.feedback-method {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fce4ec;
+    border-radius: 8px;
+}
+
+.contact-method h2,
+.feedback-method h2 {
+    color: #c2185b;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+}
+
+.email-link {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Info Boxes */
+.info-box {
+    background: #fce4ec;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.info-box strong {
+    color: #c2185b;
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .content-container {
+        padding: 1.5rem;
+    }
+
+    footer {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+
+.sidebar-overlay.open {
+    display: block;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
