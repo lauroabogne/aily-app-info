@@ -1,2 +1,7 @@
+# Harangan ang lahat ng normal na search engine
 User-agent: *
 Disallow: /
+
+# Gumawa ng exception para lang sa Google AdMob crawler para mabasa ang app-ads.txt
+User-agent: Mediapartners-Google
+Allow: /app-ads.txt
